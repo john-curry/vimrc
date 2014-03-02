@@ -4,6 +4,7 @@ let mapleader = "-"
 inoremap jj <esc>
 colorscheme desert
 set hlsearch incsearch
+syntax on
 augroup file_typevim
   autocmd!
   autocmd FileType vim setlocal foldmethod=marker
