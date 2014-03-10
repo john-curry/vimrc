@@ -2,6 +2,7 @@ set nocompatible
 set number
 let mapleader = "-"
 inoremap jj <esc>
+inoremap JJ <esc>
 colorscheme desert
 set hlsearch incsearch
 syntax on
@@ -28,13 +29,11 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 " }}}
-inoremap <leader>co <C-n><left>
 inoremap <F4> :wa <Enter> :make <Enter>
 inoremap <F5> :!./out <Enter>
 inoremap <c-u> <esc> viwUi
 nnoremap <c-u> viwU<esc>
 nnoremap <leader>rr !./out 
-nnoremap <leader>cls :!reset<Enter><Enter>
 nnoremap dn <nop> " cancel delete
 nnoremap <leader>we :w \| :e<space>
 vnoremap <leader>jj <esc> 
