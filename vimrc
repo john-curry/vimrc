@@ -65,7 +65,7 @@ augroup cplusplus_group
   autocmd FIleType cpp :iabbrev <buffer> stds std::string
   autocmd FIleType cpp :iabbrev <buffer> Include include<left>
   autocmd FIleType cpp :iabbrev <buffer> INclude include<left>
-  autocmd Filetype cpp :set syntax=cpp11
+  autocmd Filetype cpp :let c_no_curly_error = 1
 augroup END 
 " }}}
 onoremap in( :<c-u>normal! f(vi(<cr>
