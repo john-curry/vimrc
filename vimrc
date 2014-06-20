@@ -10,6 +10,10 @@ set showcmd
 set showmatch
 set ignorecase
 set hidden
+set background=light
+set background=dark
+set shellcmdflag=-ic
+set mouse=a
 syntax on
 augroup file_typevim
   autocmd!
@@ -45,6 +49,7 @@ nnoremap <leader>rr !./out
 nnoremap dn <nop> " cancel delete
 nnoremap <leader>we :w \| :e<space>
 vnoremap <leader>jj <esc> 
+nnoremap <leader>o  :!op %
 nnoremap <leader>g :silent execute "grep -R " . shellescape(expand("<cWORD>")) . " ."<cr>:copen<cr>
 iabbrev Include include
 iabbrev INclude include
@@ -76,6 +81,17 @@ augroup cplusplus_group
   autocmd Filetype cpp :let c_no_curly_error = 1
 augroup END 
 " }}}
+" tex preferences --------------- {{{
+augroup tex files
+  autocmd!
+  autocmd FileType tex set number!
+  autocmd FileType tex nnoremap j gj
+  autocmd FileType tex nnoremap k gk
+  autocmd FileType tex nnoremap <leader><Enter> <Enter>i\itbf{
+augroup END
+" }}}
+
+
 onoremap in( :<c-u>normal! f(vi(<cr>
 onoremap il( :<c-u>normal! F(vi(<cr>
 onoremap in{ :<c-u>normal! f{vi{<cr>
