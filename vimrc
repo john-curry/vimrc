@@ -12,8 +12,9 @@ set ignorecase
 set hidden
 set background=light
 set background=dark
-set shellcmdflag=-ic
+set shellcmdflag=-c
 set mouse=a
+set wildignorecase
 syntax on
 augroup file_typevim
   autocmd!
@@ -79,17 +80,22 @@ augroup cplusplus_group
   autocmd FIleType cpp :iabbrev <buffer> Include include<left>
   autocmd FIleType cpp :iabbrev <buffer> INclude include<left>
   autocmd Filetype cpp :let c_no_curly_error = 1
+  autocmd FileType cpp nnoremap <leader>m :make clean<cr>:make<cr>
 augroup END 
 " }}}
+
+
 " tex preferences --------------- {{{
 augroup tex files
   autocmd!
   autocmd FileType tex set number!
+  autocmd FileType tex set spell spelllang=en_us
   autocmd FileType tex nnoremap j gj
   autocmd FileType tex nnoremap k gk
   autocmd FileType tex nnoremap <leader><Enter> <Enter>i\itbf{
 augroup END
 " }}}
+
 
 
 onoremap in( :<c-u>normal! f(vi(<cr>
