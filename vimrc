@@ -19,9 +19,6 @@ augroup file_typevim
   autocmd!
   autocmd FileType vim setlocal foldmethod=marker
 augroup END
-if has("autocmd")
-  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-endif
 " Statusline settings ----------------------- {{{
 set laststatus=2
 set statusline=%f "path to file
