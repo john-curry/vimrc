@@ -90,7 +90,6 @@ augroup tex files
   autocmd FileType tex set textwidth=80
   autocmd FileType tex set formatoptions+=t
   autocmd FileType tex set wrap linebreak nolist 
-  autocmd FileType tex 
   autocmd FileType tex nnoremap j gj
   autocmd FileType tex nnoremap k gk
   autocmd FileType tex nnoremap <leader><Enter> <Enter>i\itbf{
