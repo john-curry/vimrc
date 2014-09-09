@@ -90,11 +90,16 @@ augroup tex files
   autocmd!
   autocmd FileType tex set number!
   autocmd FileType tex set spell spelllang=en_us
+  autocmd FileType tex set textwidth=80
+  autocmd FileType tex set formatoptions+=t
+  autocmd FileType tex set wrap linebreak nolist 
+  autocmd FileType tex 
   autocmd FileType tex nnoremap j gj
   autocmd FileType tex nnoremap k gk
   autocmd FileType tex nnoremap <leader><Enter> <Enter>i\itbf{
 augroup END
 " }}}
+
 
 
 
